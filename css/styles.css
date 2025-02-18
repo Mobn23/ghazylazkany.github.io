@@ -1,0 +1,110 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#map {
+  height: 100vh;
+}
+
+.editor-panel {
+  display: none;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: white;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.close-button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.editor-panel h3 {
+  margin-top: 0;
+}
+
+.editor-panel label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+.editor-panel input {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.editor-panel button {
+  width: 100%;
+  padding: 10px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.editor-panel button:hover {
+  background: #0056b3;
+}
+
+#drag-toggle, #export-xml {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 10px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+#export-xml {
+  top: 60px;
+}
+#compass {
+  position: absolute;
+  top: 200px;
+  left: 20px;
+  width: 80px;
+  height: 80px;
+  border: 2px solid black;
+  border-radius: 50%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#compass-needle {
+  width: 2px;
+  height: 40px;
+  background: red;
+  position: absolute;
+  transform-origin: center;
+  transition: transform 0.2s linear;
+}
+
+.direction {
+  position: absolute;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.north { top: 5px; left: 50%; transform: translateX(-50%); }
+.south { bottom: 5px; left: 50%; transform: translateX(-50%); }
+.east  { right: 5px; top: 50%; transform: translateY(-50%); }
+.west  { left: 5px; top: 50%; transform: translateY(-50%); }

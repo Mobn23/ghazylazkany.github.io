@@ -1,0 +1,29 @@
+
+    <buildings>
+      
+      <building>
+        <id>1</id>
+        <coordinates>
+          <point>36.6348723445652,35.93059362923343</point><point>36.6349032243072,35.93081335001473</point><point>36.634013655434806,35.93093837076658</point><point>36.63398277569281,35.93071864998528</point><point>36.6348723445652,35.93059362923343</point>
+        </coordinates>
+        <height>50</height>
+        <width>20</width>
+        <length>100</length>
+        <rotation>82</rotation>
+        <locked>false</locked>
+      </building>
+    
+      <building>
+        <id>2</id>
+        <coordinates>
+          <point>36.635597050419584,35.93193421108168</point><point>36.63625160866432,35.93193421108168</point><point>36.63625160866432,35.93248218089843</point><point>36.635597050419584,35.93248218089843</point><point>36.635597050419584,35.93193421108168</point>
+        </coordinates>
+        <height>30</height>
+        <width>59</width>
+        <length>61</length>
+        <rotation>0</rotation>
+        <locked>false</locked>
+      </building>
+    
+    </buildings>
+  
