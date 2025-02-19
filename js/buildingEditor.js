@@ -116,7 +116,7 @@ export const setupBuildingEditor = (map) => {
   // Toggle drag mode
   dragToggleButton.addEventListener('click', () => {
     isDragModeActive = !isDragModeActive;
-    dragToggleButton.textContent = isDragModeActive ? 'Disable Drag Mode' : 'Enable Drag Mode';
+    dragToggleButton.textContent = isDragModeActive ? 'Enable Drag Mode' : 'Disable Drag Mode';
     map.getCanvas().style.cursor = isDragModeActive ? 'grab' : 'pointer';
 
     // Enable or disable map interactions
