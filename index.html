@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel='stylesheet' href='https://unpkg.com/maplibre-gl@5.1.0/dist/maplibre-gl.css' />
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <script src='https://unpkg.com/maplibre-gl@5.1.0/dist/maplibre-gl.js'></script>
 </head>
 <body>
@@ -32,11 +33,13 @@
   </div>
   <button id="drag-toggle">Disable Drag Mode</button>
   <div id="compass">
-  <div id="compass-needle"></div>
+  <div id="compass-needle">
+    <i class="fa-solid fa-location-arrow"></i>
+  </div>
   <div class="direction north">شمال</div>
-  <div class="direction south">جنوب</div>
-  <div class="direction east">شرق</div>
-  <div class="direction west">غرب</div>
+  <div class="direction south">ئبلي</div>
+  <div class="direction east">مشرق</div>
+  <div class="direction west">مغرب</div>
 </div>
   <script type="module" src="js/utils.js"></script>
   <script type="module" src="js/mapSetup.js"></script>
