@@ -12,7 +12,7 @@ export const setupBuildingEditor = (map) => {
   const rotationSlider = document.getElementById('rotation');
   const dragToggleButton = document.getElementById('drag-toggle');
   const closeEditorButton = document.getElementById('close-editor');
-  const lockBuildingButton = document.getElementById('lock-building');
+  // const lockBuildingButton = document.getElementById('lock-building');
   const exportXmlButton = document.getElementById('export-xml');
   let selectedBuildingId = null;
   let selectedBuilding = null;
@@ -35,7 +35,7 @@ export const setupBuildingEditor = (map) => {
     widthSlider.value = width;
     lengthSlider.value = length;
     rotationSlider.value = rotation;
-    lockBuildingButton.textContent = locked ? 'Unlock Building' : 'Lock Building';
+    // lockBuildingButton.textContent = locked ? 'Unlock Building' : 'Lock Building';
 
     // Show the editor panel
     editor.style.display = 'block';
@@ -134,35 +134,35 @@ export const setupBuildingEditor = (map) => {
   });
 
   // Toggle building lock
-  lockBuildingButton.addEventListener('click', () => {
-    if (selectedBuildingId && selectedBuilding) {
-      const source = map.getSource('custom-buildings');
-      const data = source._data;
+  // lockBuildingButton.addEventListener('click', () => {
+  //   if (selectedBuildingId && selectedBuilding) {
+  //     const source = map.getSource('custom-buildings');
+  //     const data = source._data;
 
-      // Update the selected building's lock state
-      const building = data.features.find(f => f.properties.id === selectedBuildingId);
-      if (building) {
-        building.properties.locked = !building.properties.locked;
-        lockBuildingButton.textContent = building.properties.locked ? 'Unlock Building' : 'Lock Building';
+  //     // Update the selected building's lock state
+  //     const building = data.features.find(f => f.properties.id === selectedBuildingId);
+  //     if (building) {
+  //       building.properties.locked = !building.properties.locked;
+  //       lockBuildingButton.textContent = building.properties.locked ? 'Unlock Building' : 'Lock Building';
 
-        // Update the building's color based on lock state
-        map.setPaintProperty('custom-3d-buildings', 'fill-extrusion-color', [
-          'case',
-          ['==', ['get', 'locked'], true],
-          'green',
-          'orange'
-        ]);
+  //       // Update the building's color based on lock state
+  //       map.setPaintProperty('custom-3d-buildings', 'fill-extrusion-color', [
+  //         'case',
+  //         ['==', ['get', 'locked'], true],
+  //         'green',
+  //         'orange'
+  //       ]);
 
-        // Update the source data
-        source.setData(data);
+  //       // Update the source data
+  //       source.setData(data);
 
-        // Update the XML file
-        updateXML(data);
+  //       // Update the XML file
+  //       updateXML(data);
 
-        console.log('Building lock toggled:', building);
-      }
-    }
-  });
+  //       console.log('Building lock toggled:', building);
+  //     }
+  //   }
+  // });
 
   // Export XML
   exportXmlButton.addEventListener('click', () => {

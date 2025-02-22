@@ -16,18 +16,21 @@
     <h3>Edit Building</h3>
     <form id="building-form">
       <label for="height">Height (m):</label>
-      <input type="number" id="height" name="height" required>
+        <input type="number" id="height" name="height" readonly>
+
       <label for="width">Width (m):</label>
-      <input type="range" id="width" name="width" min="10" max="100" step="1" required>
+        <input type="number" id="width" name="width" readonly>
+
       <label for="length">Length (m):</label>
-      <input type="range" id="length" name="length" min="10" max="100" step="1" required>
+        <input type="number" id="length" name="length" readonly>
+
       <label for="rotation">Rotation (°):</label>
-      <input type="range" id="rotation" name="rotation" min="0" max="360" step="1" required>
-      <button type="button" id="lock-building">Unlock Building</button>
+        <input type="number" id="rotation" name="rotation" readonly>
+
+      <!-- <button type="button" id="lock-building">Unlock Building</button> -->
     </form>
   </div>
   <button id="drag-toggle">Disable Drag Mode</button>
-  <button id="export-xml">Export XML</button>
   <div id="compass">
   <div id="compass-needle"></div>
   <div class="direction north">شمال</div>
